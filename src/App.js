@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Page404 from "./components/Page404";
+import UnderConstruction from "./components/UnderConstruction";
+import Dashboard from "./components/Dashboard";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/bank" element={<UnderConstruction />} />
+        <Route path="/stats" element={<UnderConstruction />} />
+        <Route path="/message" element={<UnderConstruction />} />
+        <Route path="/videos" element={<UnderConstruction />} />
+        <Route path="/users" element={<UnderConstruction />} />
+        <Route path="/files" element={<UnderConstruction />} />
+        <Route path="/campaign" element={<UnderConstruction />} />
+        <Route path="/parameters" element={<UnderConstruction />} />
+        <Route path="*" element={<Page404 />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
