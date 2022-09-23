@@ -1,10 +1,9 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./styles/setting.scss";
 import Page404 from "./components/Page404";
 import UnderConstruction from "./components/UnderConstruction";
 import Dashboard from "./components/Dashboard";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   return (
