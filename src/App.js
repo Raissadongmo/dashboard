@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./styles/setting.scss";
 import Page404 from "./components/Page404";
 import UnderConstruction from "./components/UnderConstruction";
-import Dashboard from "./components/Dashboard";
-
+import Home from "./pages/Home";
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
         <Route path="/bank" element={<UnderConstruction />} />
         <Route path="/stats" element={<UnderConstruction />} />
         <Route path="/message" element={<UnderConstruction />} />
