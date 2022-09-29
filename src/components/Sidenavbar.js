@@ -14,29 +14,26 @@ const Sidenavbar = () => {
   const [currentLink, setCurrentLink] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <section className={`${isOpen ? "sidebar1" : "sidebar2"}`}>
+    <section className={`${isOpen ? " sidebar sidebar1" : "sidebar sidebar2"}`}>
       <div className="top">
-        <div className="brand">
-          <h1>dappr</h1>
-        </div>
+        <div className="brand">{isOpen && <h1>dappr</h1>}</div>
         <img
           src="/outline.png"
-          className="picture"
+          className={isOpen ? "picture " : "picture picture-out"}
           onClick={() => {
-            setIsOpen(!isOpen)`"rotate-180"`;
+            setIsOpen(!isOpen);
           }}
         />
-        <div className="toggle"></div>
         <div className="link">
           <ul>
             <li
               onClick={() => setCurrentLink(1)}
-              className={currentLink === 1 ? "active" : ""}
+              className={currentLink === 1 ? "active hidespan" : ""}
             >
               <a href="#">
                 <SiHomeassistant />
-                <span> Home</span>
               </a>
+              {isOpen && <span> Home</span>}
             </li>
             <li
               onClick={() => setCurrentLink(2)}
@@ -44,8 +41,8 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <BsHandThumbsUp />
-                <span> Like</span>
               </a>
+              {isOpen && <span> Like</span>}
             </li>
             <li
               onClick={() => setCurrentLink(3)}
@@ -53,7 +50,7 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <FiMail />
-                <span> Mail</span>
+                {isOpen && <span> Mail</span>}
               </a>
             </li>
             <li
@@ -62,7 +59,7 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <DiGoogleCloudPlatform />
-                <span> Cloud</span>
+                {isOpen && <span> Cloud</span>}
               </a>
             </li>
             <li
@@ -71,7 +68,7 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <BiGitRepoForked />
-                <span> Branchs</span>
+                {isOpen && <span> Branchs</span>}
               </a>
             </li>
             <li
@@ -80,7 +77,7 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <FiFileText />
-                <span> Text</span>
+                {isOpen && <span> Text</span>}
               </a>
             </li>
             <li
@@ -89,7 +86,7 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <BiLinkExternal />
-                <span> LogOut</span>
+                {isOpen && <span> LogOut</span>}
               </a>
             </li>
           </ul>
@@ -101,7 +98,7 @@ const Sidenavbar = () => {
           >
             <a href="#">
               <BsGearFill />
-              <span> Settings</span>
+              {isOpen && <span> Settings</span>}
             </a>
           </li>
         </div>

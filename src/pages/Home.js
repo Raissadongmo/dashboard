@@ -4,7 +4,7 @@ import Dashboard from "../components/Dashboard";
 import "./home.scss";
 const Home = () => {
   return (
-    <div className="nav">
+    <div className="flex">
       <Sidenavbar />
       <Dashboard />
     </div>
