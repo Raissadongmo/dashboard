@@ -1,23 +1,26 @@
 import React from "react";
-
 import { Container, Row, Col } from "react-bootstrap";
 
 const Dashboard = () => {
   return (
     <Container className="dash">
-      <Row>
-        <Col>
-          <Row> banque</Row>
-          <Row>
-            <Col>Users</Col>
-            <Col>stats</Col>
+      <Row className="rows">
+        <Col className="cols" sm={8} xs={12}>
+          <Row className="rows"> banque</Row>
+          <Row className="rows">
+            <Col className="cols" sm={6} xs={6}>
+              Users
+            </Col>
+            <Col className="cols" sm={6} xs={6}>
+              stats
+            </Col>
           </Row>
-          <Row>messages</Row>
+          <Row className="rows">messages</Row>
         </Col>
-        <Col>
-          <Row>status</Row>
-          <Row>infos</Row>
-          <Row>meeting</Row>
+        <Col className="cols" sm={4} xs={12}>
+          <Row className="rows">status</Row>
+          <Row className="rows">infos</Row>
+          <Row className="rows">meeting</Row>
         </Col>
       </Row>
     </Container>

@@ -14,12 +14,12 @@ const Sidenavbar = () => {
   const [currentLink, setCurrentLink] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
   return (
-    <section className={`${isOpen ? " sidebar sidebar1" : "sidebar sidebar2"}`}>
+    <div className={`${isOpen ? " sidebar sidebar1" : "sidebar sidebar2"}`}>
       <div className="top">
         <div className="brand">{isOpen && <h1>dappr</h1>}</div>
         <img
           src="/outline.png"
-          className={isOpen ? "picture " : "picture picture-out"}
+          className={isOpen ? "line " : "line line-out"}
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -32,8 +32,8 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <SiHomeassistant />
+                {isOpen && <span> Dashboard</span>}
               </a>
-              {isOpen && <span> Home</span>}
             </li>
             <li
               onClick={() => setCurrentLink(2)}
@@ -41,8 +41,8 @@ const Sidenavbar = () => {
             >
               <a href="#">
                 <BsHandThumbsUp />
+                {isOpen && <span> Like</span>}
               </a>
-              {isOpen && <span> Like</span>}
             </li>
             <li
               onClick={() => setCurrentLink(3)}
@@ -92,18 +92,21 @@ const Sidenavbar = () => {
           </ul>
         </div>
         <div className="foot">
-          <li
-            onClick={() => setCurrentLink(8)}
-            className={currentLink === 8 ? "active" : ""}
-          >
-            <a href="#">
-              <BsGearFill />
-              {isOpen && <span> Settings</span>}
-            </a>
-          </li>
+          <lu>
+            <li>
+              <a
+                href="#"
+                onClick={() => setCurrentLink(8)}
+                className={currentLink === 8 ? "active" : ""}
+              >
+                <BsGearFill />
+                {isOpen && <span> Settings</span>}
+              </a>
+            </li>
+          </lu>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
