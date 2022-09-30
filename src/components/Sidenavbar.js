@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { AiOutlineLeft } from "react-icons/ai";
+import { MdAccountBalance } from "react-icons/md";
 import { SiHomeassistant } from "react-icons/si";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
@@ -49,8 +50,8 @@ const Sidenavbar = () => {
               className={currentLink === 3 ? "active" : ""}
             >
               <a href="#">
-                <FiMail />
-                {isOpen && <span> Mail</span>}
+                <MdAccountBalance />
+                {isOpen && <span> Bank</span>}
               </a>
             </li>
             <li
@@ -58,8 +59,8 @@ const Sidenavbar = () => {
               className={currentLink === 4 ? "active" : ""}
             >
               <a href="#">
-                <DiGoogleCloudPlatform />
-                {isOpen && <span> Cloud</span>}
+                <FiMail />
+                {isOpen && <span> Mail</span>}
               </a>
             </li>
             <li
@@ -67,8 +68,8 @@ const Sidenavbar = () => {
               className={currentLink === 5 ? "active" : ""}
             >
               <a href="#">
-                <BiGitRepoForked />
-                {isOpen && <span> Branchs</span>}
+                <DiGoogleCloudPlatform />
+                {isOpen && <span> Cloud</span>}
               </a>
             </li>
             <li
@@ -76,13 +77,22 @@ const Sidenavbar = () => {
               className={currentLink === 6 ? "active" : ""}
             >
               <a href="#">
-                <FiFileText />
-                {isOpen && <span> Text</span>}
+                <BiGitRepoForked />
+                {isOpen && <span> Branchs</span>}
               </a>
             </li>
             <li
               onClick={() => setCurrentLink(7)}
               className={currentLink === 7 ? "active" : ""}
+            >
+              <a href="#">
+                <FiFileText />
+                {isOpen && <span> Text</span>}
+              </a>
+            </li>
+            <li
+              onClick={() => setCurrentLink(8)}
+              className={currentLink === 8 ? "active" : ""}
             >
               <a href="#">
                 <BiLinkExternal />
@@ -92,18 +102,18 @@ const Sidenavbar = () => {
           </ul>
         </div>
         <div className="foot">
-          <lu>
+          <ul>
             <li>
               <a
                 href="#"
-                onClick={() => setCurrentLink(8)}
-                className={currentLink === 8 ? "active" : ""}
+                onClick={() => setCurrentLink(9)}
+                className={currentLink === 9 ? "active" : ""}
               >
                 <BsGearFill />
                 {isOpen && <span> Settings</span>}
               </a>
             </li>
-          </lu>
+          </ul>
         </div>
       </div>
     </div>
