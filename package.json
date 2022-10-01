@@ -25,13 +25,18 @@
     "format:check": "prettier --check src/**/*.{js,jsx,scss,css,ts,tsx}",
     "test:lint": "eslint src/**/*.{js,jsx,ts,tsx} --max-warnings=0",
     "test:lint:fix": "npm run test:lint -- --fix",
-    "test:stylelint": "stylelint src/**/*.scss --max-warnings=0",
+    "test:stylelint": "stylelint src/**/*.{scss,css} --max-warnings=0",
     "test:stylelint:fix": "npm run test:stylelint -- --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "speak":"echo HALLO"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run format:check & npm run test:lint"
+      "npm run format:check",
+      "npm run test:lint"
+    ],
+    "src/**/*.{scss,css}": [
+      "echo check SCSS AND CSS File"
     ]
   },
   "husky": {
