@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Bank from "./Bank";
 
 const Dashboard = () => {
   return (
     <Row className="dash">
       <Col className="cols" md={6} sm={8} xs={12}>
-        <Row className="rows"> banque</Row>
+        <Row className="rows">{<Bank />}</Row>
         <Row className="rows">
           <Col className="cols" sm={5} xs={12}>
             Users

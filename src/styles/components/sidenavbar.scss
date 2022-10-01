@@ -68,18 +68,18 @@ li{
     gap: 0.6rem;
 
     &:hover{
-        background-color: var(--semiligth);
+       // background-color: var(--semiligth);
        a, span{
-        color: var(--dark);
+        color: var(--semiligth);
        }
     
     }
 }
 
 .active{
-    background-color: var(--semiligth);
+   // background-color: var(--semiligth);
     a, span{
-        color: var(--primary-2);
+        color: var(--semiligth);
     }
 }
 
