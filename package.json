@@ -26,7 +26,8 @@
     "test:lint": "eslint src/**/*.{js,jsx,ts,tsx} --max-warnings=0",
     "test:lint:fix": "npm run test:lint -- --fix",
     "test:stylelint": "stylelint src/**/*.scss --max-warnings=0",
-    "test:stylelint:fix": "npm run test:stylelint -- --fix"
+    "test:stylelint:fix": "npm run test:stylelint -- --fix",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -58,7 +59,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.1",
+    "husky": "^8.0.0",
     "lint-staged": "^13.0.3",
     "release-it": "^15.4.2",
     "stylelint": "^14.13.0",
